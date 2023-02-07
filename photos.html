@@ -16,6 +16,11 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
+
+    <!-- lightgallery -->
+    <link type="text/css" rel="stylesheet" href="lightgallery/css/lightgallery.css" />
+    <link type="text/css" rel="stylesheet" href="lightgallery/css/lg-thumbnail.css" />
+
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="style.css">
     <title>Lady Gypsy</title>
@@ -28,54 +33,116 @@
             <div class="bar"></div>
         </div>
 
+        
         <nav>
             <ul class="navbar">
 
                 <li>
-                    <a href="#">Work</a>
+                    <a href="index.html">Home</a>
                 </li>
 
                 <li>
-                    <a href="#">BIOGRAPHY</a>
+                    <a href="biography.html">About</a>
                 </li>
 
 
                 <li>
-                    <a href="photos.html">PHOTOS</a>
+                    <a href="photos.html">Photos</a>
                 </li>
 
+
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="contact.html">Contact</a>
                 </li>
 
             </ul>
         </nav>
 
         <main>
+            <!-- <h1 class="heading">LADY GYPSY</h1> -->
             <section class="photos">
-                <h1> PHOTOS</h1>
+                <h1>PHOTOS</h1>
 
                 <div class="gallery">
+                    <a href="photos/1.jpg">
+                        <img src="photos/1.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/2.jpg">
+                        <img src="photos/2.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/3.jpg">
+                        <img src="photos/3.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/4.jpg">
+                        <img src="photos/4.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/5.jpg">
+                        <img src="photos/5.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/6.jpg">
+                        <img src="photos/6.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/7.jpg">
+                        <img src="photos/7.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/8.jpg">
+                        <img src="photos/8.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/9.jpg">
+                        <img src="photos/9.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/10.jpg">
+                        <img src="photos/10.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/11.jpg">
+                        <img src="photos/11.jpg" alt="lynette">
+                    </a>
+
+                    <a href="photos/12.jpg">
+                        <img src="photos/12.jpg" alt="lynette">
+                    </a>
 
                 </div>
 
             </section>
+
+
         </main>
-
-
-
 
     </div>
 
 
+    <!-- lightgallery -->
+    <script src="lightgallery/lightgallery.umd.js"></script>
+
+    <!-- plugin -->
+    <script src="lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"></script>
+
+    <script type="text/javascript">
+        lightGallery(document.querySelector('.gallery'), {
+            plugins: [lgThumbnail],
+            speed: 200,
+            mode: 'lg-fade',
+        });
+    </script>
 
 
 
-
-
+    <!-- own js -->
+    <script src="app.js"></script>
 
 </body>
 
-<script src="app.js"></script>
+
 
 </html>
