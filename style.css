@@ -169,11 +169,15 @@ nav {
 
 
 
-/* biography */
+/* biography in index.html*/
 
+
+/* pages padding */
 .bio,
 .videos,
-.photos {
+.photos,
+.biography,
+.contact {
     padding-left: 1.6rem;
     padding-right: 1.6rem;
 }
@@ -252,4 +256,92 @@ iframe {
 .gallery img{
     width: 100%;
     max-width: 700px;
+}
+
+/* biography.html */
+.biography h1{
+    font-size: var(--heading-font-size);
+    text-align: center;
+}
+
+.biography p{
+    font-size: 1.6rem;
+    padding-top:var(--paragraph-spacing)
+}
+
+.biography img{
+    width: 100%;
+    padding-top: var(--paragraph-spacing);
+}
+
+/* contact.html */
+
+.contact h1{
+    font-size: var(--heading-font-size);
+    text-align: center;
+    padding-top: 4rem;
+}
+
+.contact h1 span{
+    display: block;
+}
+
+
+form {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#name {
+    margin-top: 3rem;
+}
+
+#name,
+#email,
+#message {
+    padding: 1rem;
+    width: 100%;
+    margin-bottom: 1rem;
+    border: 2px solid black;
+    font-size: 2rem;
+}
+
+.contact button {
+    padding: 1.5rem;
+    font-size: 2rem;
+    font-weight: bold;
+    width: 50%;
+    max-width: 20rem;
+    background-color: white;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+
+.contact button::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-color: var(--main-color);
+    z-index: -1;
+    transform: scaleX(0);
+    transition: .2s ease-in;
+    transform-origin: left;
+}
+
+.contact button:hover::before {
+    transform: scaleX(1);
+}
+
+.contact div {
+    padding-top: 3rem;
+}
+.phone,.email{
+    font-size: 2rem;
+    padding-top:var(--paragraph-spacing)
+}
+
+.form-option{
+    padding-top: var(--paragraph-spacing);
+    font-size: 1.6rem;
 }

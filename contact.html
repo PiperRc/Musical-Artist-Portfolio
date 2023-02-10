@@ -16,6 +16,9 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
 
+    <!-- FONT AWESOME -->
+    <script src="https://kit.fontawesome.com/493b3e3710.js" crossorigin="anonymous"></script>
+
     <!-- STYLESHEET -->
     <link rel="stylesheet" href="style.css">
     <title>Lady Gypsy</title>
@@ -28,7 +31,7 @@
             <div class="bar"></div>
         </div>
 
-       
+
         <nav>
             <ul class="navbar">
 
@@ -55,7 +58,35 @@
         <main>
             <!-- <h1 class="heading">LADY GYPSY</h1> -->
             <section class="contact">
-                <h1>GET IN CONTACT !</h1>
+                <h1>GET IN TOUCH
+                    <span>WITH LADY GYPSY</span>
+                </h1>
+
+                <p class="phone"> 
+                    <i class="fa-solid fa-phone phone-icon icon"></i>    : xxx-xxx-xxx
+                </p>
+
+                <p class="email">
+                    <i class="fa-solid fa-envelope email-icon icon"></i>   : xxx@xxx.com
+                </p>
+
+                <p class="form-option"> or fill out the contact form below:</p>
+
+
+                <form action="https://api.web3forms.com/submit" method="POST">
+
+
+                    <input type="hidden" name="access_key" value="1559e601-1e30-4ee0-be81-9d97afc7434a">
+                    <input type="text" id="name" name="name" placeholder="Name*" required>
+
+                    <input type="email" id="email" name="email" placeholder="Email*" required>
+
+                    <textarea name="message" id="message" cols="30" rows="20" placeholder="Message*"
+                        required></textarea>
+
+                    <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                    <button>SEND</button>
+                </form>
             </section>
         </main>
 
