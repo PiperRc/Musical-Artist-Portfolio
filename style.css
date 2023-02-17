@@ -11,8 +11,8 @@ html {
 
 :root {
     --paragraph-spacing: 3rem;
-    --text-color:#373737;
-    --heading-font-size:3rem;
+    --text-color: #373737;
+    --heading-font-size: 3rem;
 }
 
 
@@ -135,7 +135,6 @@ nav {
     position: relative;
     display: flex;
     justify-content: center;
-    color: white;
     color: black;
 }
 
@@ -191,7 +190,6 @@ nav {
 .bio p {
     font-size: 1.6rem;
     color: var(--text-color);
-
     line-height: 2;
 }
 
@@ -205,32 +203,32 @@ nav {
     padding-top: var(--paragraph-spacing);
 }
 
-.readMore{
-    display:inline-block;
+.readMore {
+    display: inline-block;
     font-size: 1.6rem;
-   border:1px solid black;
-   margin-top:3rem;
-   padding:1rem 1.6rem 1rem 1.6rem;
-   cursor: pointer;
-   color: var(--text-color);
-   border-radius: 5px;
-   text-decoration: none;
+    border: 1px solid black;
+    margin-top: 3rem;
+    padding: 1rem 1.6rem 1rem 1.6rem;
+    cursor: pointer;
+    color: var(--text-color);
+    border-radius: 5px;
+    text-decoration: none;
 }
 
-.readMore:hover{
-    border:1px solid blue;
-    color:blue;
+.readMore:hover {
+    border: 1px solid blue;
+    color: blue;
 }
 
 
 /* videos */
-.videos{
-    padding-top:var(--paragraph-spacing);
+.videos {
+    padding-top: var(--paragraph-spacing);
 }
 
 
-.videos h1{
-    font-size:var(--heading-font-size) ;
+.videos h1 {
+    font-size: var(--heading-font-size);
     text-align: center;
 }
 
@@ -242,47 +240,48 @@ iframe {
 
 /* PHOTOS.HTML */
 
-.photos h1{
+.photos h1 {
     font-size: var(--heading-font-size);
     text-align: center;
     padding-top: var(--paragraph-spacing);
 }
-.gallery{
+
+.gallery {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.gallery img{
+.gallery img {
     width: 100%;
     max-width: 700px;
 }
 
 /* biography.html */
-.biography h1{
+.biography h1 {
     font-size: var(--heading-font-size);
     text-align: center;
 }
 
-.biography p{
+.biography p {
     font-size: 1.6rem;
-    padding-top:var(--paragraph-spacing)
+    padding-top: var(--paragraph-spacing)
 }
 
-.biography img{
+.biography img {
     width: 100%;
     padding-top: var(--paragraph-spacing);
 }
 
 /* contact.html */
 
-.contact h1{
+.contact h1 {
     font-size: var(--heading-font-size);
     text-align: center;
     padding-top: 4rem;
 }
 
-.contact h1 span{
+.contact h1 span {
     display: block;
 }
 
@@ -322,7 +321,6 @@ form {
     content: '';
     position: absolute;
     inset: 0;
-    background-color: var(--main-color);
     z-index: -1;
     transform: scaleX(0);
     transition: .2s ease-in;
@@ -336,12 +334,124 @@ form {
 .contact div {
     padding-top: 3rem;
 }
-.phone,.email{
+
+/*font awesome */
+.phone,
+.email {
     font-size: 2rem;
-    padding-top:var(--paragraph-spacing)
+    padding-top: var(--paragraph-spacing)
 }
 
-.form-option{
+.form-option {
     padding-top: var(--paragraph-spacing);
     font-size: 1.6rem;
 }
+
+/* social_media */
+
+.social_media {
+    background-color: #FAF9F6;
+}
+
+.social_media h1 {
+    text-align: center;
+    font-size: var(--heading-font-size);
+    padding-top: var(--paragraph-spacing);
+    
+}
+
+.social_links span {
+    display: block;
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+
+.social_media h1,
+.social_links span,
+.social_links a{
+    color: #0096FF;
+    font-weight: bold;
+}
+
+
+/* give the a link a display of flex*/
+
+.social_links a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding-top: var(--paragraph-spacing);
+
+}
+
+/* footer */
+
+footer{
+    background-color: #383838;
+    color:white;
+    padding-top: var(--paragraph-spacing);
+    padding-bottom: var(--paragraph-spacing);
+    font-size: 1.3rem;
+}
+footer p{
+    text-align: center;
+}
+
+footer span{
+    display: block;
+}
+
+footer span a{
+    color:white;
+    
+}
+@media screen and (min-width:1100px) {
+    
+    .hamburger {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        z-index: 100;
+        height: 11vh;
+        width: 100%;
+        background-color: hsla(0, 0%, 100%, .9);
+        
+        position: absolute;
+       
+    }
+
+    .navbar a {
+        color: black;
+    }
+    /* from mobile */
+
+    /* .navbar {
+        /* width: 100%;
+        height: 80%;
+        list-style: none;
+        font-size: 2.5em;
+        color: black;
+        visibility: hidden;
+        opacity: 0;
+        transition: opacity 1s;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        font-weight: bold;
+    } */ 
+
+    .navbar{
+        height: 100%;
+        visibility: visible;
+        opacity: .5;
+        flex-direction: row;
+    }
+    
+    
+}
+
+
