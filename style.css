@@ -92,6 +92,10 @@ nav {
     background-color: greenyellow;
 }
 
+a.logo {
+    display: none;
+}
+
 /* when the hamburger is clicked,this class added to .nav-width */
 .nav-width {
     width: 50%;
@@ -145,19 +149,19 @@ nav {
 
 }
 
-.heading {
-    font-family: 'Lobster', cursive;
-    letter-spacing: 5px;
-    font-size: 3rem;
-}
 
 .heading,
 .hero-section h2 {
     z-index: 1;
-
     position: absolute;
 }
 
+.heading {
+    font-family: 'Lobster', cursive;
+    letter-spacing: 5px;
+    font-size: 3rem;
+
+}
 
 .hero-section h2 {
     position: absolute;
@@ -235,6 +239,7 @@ nav {
 
 iframe {
     width: 100%;
+    /* max-width: ; */
     padding-top: var(--paragraph-spacing);
 }
 
@@ -258,9 +263,10 @@ iframe {
 }
 
 /* biography.html */
-.biography h1 {
+.biography-heading {
     font-size: var(--heading-font-size);
     text-align: center;
+    padding-top: var(--paragraph-spacing);
 }
 
 .biography p {
@@ -283,6 +289,10 @@ iframe {
 
 .contact h1 span {
     display: block;
+}
+
+.contact p {
+    text-align: center;
 }
 
 
@@ -357,7 +367,7 @@ form {
     text-align: center;
     font-size: var(--heading-font-size);
     padding-top: var(--paragraph-spacing);
-    
+
 }
 
 .social_links span {
@@ -368,7 +378,7 @@ form {
 
 .social_media h1,
 .social_links span,
-.social_links a{
+.social_links a {
     color: #0096FF;
     font-weight: bold;
 }
@@ -387,27 +397,29 @@ form {
 
 /* footer */
 
-footer{
+footer {
     background-color: #383838;
-    color:white;
+    color: white;
     padding-top: var(--paragraph-spacing);
     padding-bottom: var(--paragraph-spacing);
     font-size: 1.3rem;
 }
-footer p{
+
+footer p {
     text-align: center;
 }
 
-footer span{
+footer span {
     display: block;
 }
 
-footer span a{
-    color:white;
-    
+footer span a {
+    color: white;
+
 }
+
 @media screen and (min-width:1100px) {
-    
+
     .hamburger {
         display: none;
     }
@@ -415,17 +427,18 @@ footer span a{
     nav {
         position: static;
         z-index: 100;
-        height: 11vh;
+        height: 12vh;
         width: 100%;
         background-color: hsla(0, 0%, 100%, .9);
-        
-        position: absolute;
-       
+
+
     }
 
     .navbar a {
         color: black;
+        font-size: 2rem;
     }
+
     /* from mobile */
 
     /* .navbar {
@@ -442,16 +455,168 @@ footer span a{
         justify-content: space-evenly;
         align-items: center;
         font-weight: bold;
-    } */ 
+    } */
 
-    .navbar{
+    .navbar {
         height: 100%;
         visibility: visible;
         opacity: .5;
         flex-direction: row;
+        justify-content: space-between;
+        padding: 0 8rem 0 8rem;
     }
-    
-    
+
+    a.logo {
+        display: block;
+        font-family: 'Lobster', cursive;
+        letter-spacing: 5px;
+        font-size: 4rem;
+    }
+
+    /* hero_section */
+
+
+    .heading {
+        padding-top: 10rem;
+        font-size: 10rem;
+    }
+
+    .hero-section h2 {
+        padding-top: 28rem;
+        font-size: 4rem;
+    }
+
+
+    /* bio in index.html */
+
+    /* .bio{
+        background-image: url(photos/red_dress.jpg);
+        background-image: url(photos/2.jpg);
+    } */
+
+
+
+
+    /* .bio p{
+       color:black;
+       font-weight: bold;
+      
+       opacity: .5;
+
+    } */
+
+
+
+    .bio img {
+        width: 50%;
+        display: block;
+        margin: 0 auto;
+
+    }
+
+    /* social_links */
+
+
+    .social_links {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    /* videos */
+
+    .music-videos{
+        display: grid;
+        grid-template-columns: repeat(3,1fr);
+        grid-gap:1.5rem;
+    }
+
+
+    /* biography.html */
+    .biography {
+        display: flex;
+        column-gap: 4rem;
+
+
+
+    }
+
+    .biography img {
+        width: 50%;
+        height: 100%;
+        object-fit: cover;
+
+    }
+
+    .biography span {
+        display: block;
+        padding-bottom: var(--paragraph-spacing);
+    }
+
+    /* photos.html */
+
+
+    .gallery {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+
+    .gallery {
+        display: grid;
+        grid-gap: 1.5rem;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
+    .gallery a {
+        width: 100%;
+        height: 100%;
+    }
+
+    .gallery img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        max-width: 700px;
+    }
+
+
+    /*animations */
+
+
+    .navbar a::after,
+    .social_links span::after {
+        content: '';
+        display: block;
+        width: 100%;
+        height: .5rem;
+        background: #0096FF;
+        transform: scaleX(0);
+        transition: 300ms ease-in-out;
+        transform-origin: left;
+    }
+
+    .navbar a:hover::after,
+    .social_links span:hover::after {
+        transform: scaleX(1);
+    }
+
+
+    .social_links a,
+    a.logo {
+        transition: 300ms ease-in-out;
+    }
+
+    .social_links a:hover,
+    a.logo:hover{
+        transform: translateY(-10px);
+    }
+
+    /* remove hover line from lady gypsy 'logo' */
+
+    a.logo::after{
+        display: none;
+    }
 }
-
-
