@@ -15,7 +15,8 @@ html {
     --heading-font-size: 3rem;
 }
 
-
+html,body{
+overflow-x: hidden;}
 
 /* navbar */
 .hamburger {
@@ -51,6 +52,7 @@ html {
 .bar::after {
     transition: all .3s ease-in-out;
     background-color: black;
+    background-color: blue;
 }
 
 .bar::before {
@@ -145,8 +147,6 @@ a.logo {
 .hero-section img {
     width: 100%;
     opacity: .5;
-
-
 }
 
 
@@ -173,7 +173,6 @@ a.logo {
 
 
 /* biography in index.html*/
-
 
 /* pages padding */
 .bio,
@@ -202,7 +201,7 @@ a.logo {
     padding-top: var(--paragraph-spacing);
 }
 
-.bio img {
+.bio-img {
     width: 100%;
     padding-top: var(--paragraph-spacing);
 }
@@ -417,6 +416,17 @@ footer span a {
     color: white;
 
 }
+/* scrolling animations */
+.hidden{
+    transform: translateX(10rem);
+    opacity: 0;
+
+    transition: 200ms;
+}
+.hidden.show{
+   transform: translateX(0);
+    opacity: 1;
+}
 
 @media screen and (min-width:1100px) {
 
@@ -487,27 +497,7 @@ footer span a {
     }
 
 
-    /* bio in index.html */
-
-    /* .bio{
-        background-image: url(photos/red_dress.jpg);
-        background-image: url(photos/2.jpg);
-    } */
-
-
-
-
-    /* .bio p{
-       color:black;
-       font-weight: bold;
-      
-       opacity: .5;
-
-    } */
-
-
-
-    .bio img {
+    .bio-img {
         width: 50%;
         display: block;
         margin: 0 auto;
@@ -524,10 +514,10 @@ footer span a {
 
     /* videos */
 
-    .music-videos{
+    .music-videos {
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-gap:1.5rem;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 1.5rem;
     }
 
 
@@ -535,9 +525,6 @@ footer span a {
     .biography {
         display: flex;
         column-gap: 4rem;
-
-
-
     }
 
     .biography img {
@@ -610,13 +597,13 @@ footer span a {
     }
 
     .social_links a:hover,
-    a.logo:hover{
+    a.logo:hover {
         transform: translateY(-10px);
     }
 
     /* remove hover line from lady gypsy 'logo' */
 
-    a.logo::after{
+    a.logo::after {
         display: none;
     }
 }

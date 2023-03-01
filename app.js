@@ -1,7 +1,7 @@
 const hamburger = document.querySelector('.hamburger');
 const nav = document.querySelector('nav');
 const navbar = document.querySelector('.navbar');
-const main=document.querySelector('main');
+const main = document.querySelector('main');
 
 
 hamburger.addEventListener('click', () => {
@@ -19,3 +19,22 @@ hamburger.addEventListener('click', () => {
     }
 
 })
+// scrolling
+
+const images = document.querySelectorAll('.hidden');
+
+const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        entry.target.classList.toggle("show", entry.isIntersecting)
+        if(entry.isIntersecting)observer.unobserve(entry.target)
+    })
+},{
+    threshold:.25,
+    
+})
+
+images.forEach(img => {
+    observer.observe(img)
+})
+
+
