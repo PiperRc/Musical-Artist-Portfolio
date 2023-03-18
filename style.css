@@ -15,8 +15,87 @@ html {
     --heading-font-size: 3rem;
 }
 
-html,body{
-overflow-x: hidden;}
+html,
+body {
+    overflow-x: hidden;
+}
+
+/* MODAL */
+
+.modal {
+    z-index: 1000;
+    position: fixed;
+    background-color: #FAF9F6;
+    /* add to desktop */
+    /* padding:2rem; */
+    
+    width: 100%;
+    max-width: 600px;
+    padding:.5rem;
+
+    left: 50%;
+    top: 50%;
+    transform: scale(0) translate(-50%, -50%);
+    transform-origin: center center;
+
+
+    padding-top:3rem;
+    padding-bottom: 3rem;
+
+}
+
+.modal_content {
+    width: 100%;
+    /* background-color:  red; */
+    margin: 0 auto;
+}
+
+.container,
+.modal,
+.share_link {
+    transition: 500ms ease-in-out;
+}
+
+
+.modal-display {
+  transform: scale(1) translate(-50%, -50%);
+
+}
+
+.modal_content h1 {
+    text-align: center;
+}
+
+.copy_link {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.copy_link input,
+.copy_link button {
+    font-size: 1.7rem;
+    padding: .5rem 0 .5rem 0;
+}
+
+.copy_link button {
+    cursor: pointer;
+}
+
+
+.modal_share {
+    padding-top: 2rem;
+    display: flex;
+    justify-content: space-around
+}
+
+.modal_share .fa-whatsapp {
+    color: #25d366;
+}
+
+
+
 
 /* navbar */
 .hamburger {
@@ -31,7 +110,10 @@ overflow-x: hidden;}
     align-items: center;
     z-index: 100;
     cursor: pointer;
+    /* pointer-events: none; */
 }
+
+
 
 .bar {
     width: 75%;
@@ -153,6 +235,7 @@ a.logo {
 .heading,
 .hero-section h2 {
     z-index: 1;
+    font-weight: bold;
     position: absolute;
 }
 
@@ -172,9 +255,8 @@ a.logo {
 
 
 
-/* biography in index.html*/
 
-/* pages padding */
+
 .bio,
 .videos,
 .photos,
@@ -344,7 +426,7 @@ form {
     padding-top: 3rem;
 }
 
-/*font awesome */
+/*font awesome for contact */
 .phone,
 .email {
     font-size: 2rem;
@@ -359,40 +441,40 @@ form {
 /* social_media */
 
 .social_media {
-    background-color: #FAF9F6;
+    padding-top: var(--paragraph-spacing);
 }
+
 
 .social_media h1 {
     text-align: center;
-    font-size: var(--heading-font-size);
-    padding-top: var(--paragraph-spacing);
-
-}
-
-.social_links span {
-    display: block;
     font-size: 2rem;
-    padding-top: 2rem;
 }
 
-.social_media h1,
-.social_links span,
-.social_links a {
-    color: #0096FF;
-    font-weight: bold;
-}
-
-
-/* give the a link a display of flex*/
-
-.social_links a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.social_media a {
     text-decoration: none;
-    padding-top: var(--paragraph-spacing);
-
 }
+
+
+.social_links {
+    display: flex;
+    justify-content: space-around;
+    padding-top: 1.5rem
+}
+
+
+
+.fa-facebook {
+    color: #1877f2;
+}
+
+.fa-instagram {
+    color: #fd1d1d;
+}
+
+.fa-share-nodes {
+    color: #01295c
+}
+
 
 /* footer */
 
@@ -400,6 +482,7 @@ footer {
     background-color: #383838;
     color: white;
     padding-top: var(--paragraph-spacing);
+    margin-top: 2rem;
     padding-bottom: var(--paragraph-spacing);
     font-size: 1.3rem;
 }
@@ -416,19 +499,39 @@ footer span a {
     color: white;
 
 }
+
 /* scrolling animations */
-.hidden{
+.hidden {
     transform: translateX(10rem);
     opacity: 0;
 
     transition: 200ms;
 }
-.hidden.show{
-   transform: translateX(0);
+
+.hidden.show {
+    transform: translateX(0);
     opacity: 1;
 }
 
 @media screen and (min-width:1100px) {
+
+.modal h1{
+    font-size: 3rem;
+}
+
+.modal input{
+    font-size: 2rem;
+    padding:1rem;
+    padding-right:2rem;
+    
+}
+
+.modal button{
+    font-size: 2rem;
+    padding:1rem;
+    padding-left:2rem;
+    padding-right: 2rem;
+}
 
     .hamburger {
         display: none;
@@ -506,11 +609,6 @@ footer span a {
 
     /* social_links */
 
-
-    .social_links {
-        display: flex;
-        justify-content: space-evenly;
-    }
 
     /* videos */
 
