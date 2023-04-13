@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- favicon -->
+
+        <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+        <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+        <!-- GOOGLE FONT-Poppins -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- GOOGLE FONT-LOBSTER -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            rel="stylesheet"
+        />
+
+        <!-- FONT AWESOME -->
+        <script
+            src="https://kit.fontawesome.com/493b3e3710.js"
+            crossorigin="anonymous"
+        ></script>
+
+         <!-- lightgallery -->
+    <link type="text/css" rel="stylesheet" href="/js/lightgallery/css/lightgallery.css" />
+    <link type="text/css" rel="stylesheet" href="/js/lightgallery/css/lg-thumbnail.css" />
+
+        <!-- STYLESHEET -->
+        <link rel="stylesheet" href="/css/style.css" />
+        <title>Lady Gypsy</title>
+    </head>
+
+    <body>
+        <div class="modal">
+            <div class="modal_content">
+                <h1>SHARE</h1>
+
+                <div class="copy_link">
+                    <input
+                        type="text"
+                        value="https://theladygypsy.com/"
+                        readonly
+                    />
+                    <button>Copy link</button>
+                </div>
+
+                <div class="modal_share">
+                    <a
+                        href="https://www.facebook.com/sharer/sharer.php?u=https://theladygypsy.com/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        <i class="fa-brands fa-facebook fa-4x"></i>
+                    </a>
+
+                    <a
+                        href="whatsapp://send?text=Check%20this%20out!%20https%3A%2F%2Fladygypsy.com%2F"
+                        data-action="share/whatsapp/share"
+                    >
+                        <i class="fa-brands fa-whatsapp fa-4x"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="hamburger">
+                <div class="bar"></div>
+            </div>
+
+            <nav>
+                <ul class="navbar">
+                    <li>
+                        <a href="/" class="logo">Lady Gypsy</a>
+                    </li>
+
+                    <li>
+                        <a href="/">Home</a>
+                    </li>
+
+                    <li>
+                        <a href="/biography">About</a>
+                    </li>
+
+                    <li>
+                        <a href="/photos">Photos</a>
+                    </li>
+
+                    <li>
+                        <a href="/contact">Contact</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <main>
+                <!-- content of index.html -->
+                <slot />
+                <!--  -->
+
+                <section class="social_media">
+                    <h1>SOCIAL MEDIA</h1>
+
+                    <div class="social_links">
+                        <a href="#" class="facebook-link">
+                            <i class="fa-brands fa-facebook fa-4x"></i>
+                        </a>
+
+                        <a href="#" class="instagram_link">
+                            <i class="fa-brands fa-instagram fa-4x"></i>
+                        </a>
+
+                        <a href="#" class="share_link">
+                            <i class="fa-solid fa-share-nodes fa-4x"></i>
+                        </a>
+                    </div>
+                </section>
+
+                <footer>
+                    <p>
+                        &copy Lynette Steele 2023
+                        <span>
+                            Made by <a
+                                href="https://www.cheyennepiper.com"
+                                target="_blank"
+                                rel="noopener noreferrer">Cheyenne Piper</a
+                            >
+                        </span>
+                    </p>
+                </footer>
+            </main>
+        </div>
+
+          <!-- lightgallery -->
+    <script src="/js/lightgallery/lightgallery.umd.js" is:inline></script>
+
+    <!-- plugin -->
+    <script src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"is:inline></script>
+
+    <script type="text/javascript">
+        lightGallery(document.querySelector('.gallery'), {
+            plugins: [lgThumbnail],
+            speed: 200,
+            mode: 'lg-fade',
+        });
+    </script>
+
+
+        <script src="/js/app.js" is:inline></script>
+    </body>
+</html>

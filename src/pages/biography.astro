@@ -1,104 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+import Template from "../layouts/Template.astro";
+---
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-     <!-- favicon -->
-
-     <link rel="icon" href="favicon.ico" type="image/x-icon">
-     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-
-    <!-- GOOGLE FONT-Poppins -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
-        rel="stylesheet">
-
-    <!-- GOOGLE FONT-LOBSTER -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
-
-    <!-- FONT AWESOME -->
-    <script src="https://kit.fontawesome.com/493b3e3710.js" crossorigin="anonymous"></script>
-
-    <!-- STYLESHEET -->
-    <link rel="stylesheet" href="style.css">
-    <title>Lady Gypsy</title>
-</head>
-
-<body>
-  <div class="modal">
-        <div class="modal_content">
-
-            <h1>SHARE</h1>
-
-            <div class="copy_link">
-                <input type="text" value="https://flawedcasual.com/" readonly>
-                <button>Copy link</button>
-            </div>
-
-            <div class="modal_share">
-                <a href="https://www.facebook.com/sharer/sharer.php?u=https://flawedcasual.com/" target="_blank"
-                    rel="noopener noreferrer">
-                    <i class="fa-brands fa-facebook fa-4x"></i>
-                </a>
-
-                <a href="whatsapp://send?text=Check%20this%20out!%20https%3A%2F%2Fflawedcasual.com%2F"
-                    data-action="share/whatsapp/share">
-                    <i class="fa-brands fa-whatsapp fa-4x"></i>
-                </a>
-
-            </div>
-
-        </div>
-    </div>
-    <div class="container">
-        <div class="hamburger">
-            <div class="bar"></div>
-        </div>
-
-
-        <nav>
-            <ul class="navbar">
-
-                <li>
-                    <a href="index.html" class="logo">Lady Gypsy</a>
-                </li>
-
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-
-                <li>
-                    <a href="biography.html">About</a>
-                </li>
-
-
-                <li>
-                    <a href="photos.html">Photos</a>
-                </li>
-
-
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-
-            </ul>
-        </nav>
-
-        <main>
-
-           
-           <!-- content of biography.html -->
-            <h1 class="biography-heading">BIOGRAPHY</h1>
+<Template>
+    <h1 class="biography-heading">BIOGRAPHY</h1>
             <section class="biography">
 
                
-                    <img src="photos/biography-picture.jpg" alt="lynette">
+                    <img src="/photos/biography-picture.jpg" alt="lynette">
                 
                 <p>
                     <span>
@@ -198,49 +107,4 @@
                     </span>
                 </p>
             </section>
-<!--  -->
-
-            <section class="social_media">
-
-                <h1>SOCIAL MEDIA</h1>
-
-                <div class="social_links">
-                    <a href="#" class="facebook-link">
-                        <i class="fa-brands fa-facebook fa-4x"></i>
-                    </a>
-
-                    <a href="#" class="instagram_link">
-                        <i class="fa-brands fa-instagram fa-4x"></i>
-                    </a>
-
-                    <a href="#" class="share_link">
-                        <i class="fa-solid fa-share-nodes fa-4x"></i>
-                    </a>
-                </div>
-
-
-            </section>
-            <footer>
-                <p>&copy Lynette Steele 2023
-                    <span>
-                        Made by <a href="https://www.cheyennepiper.com" target="_blank"
-                            rel="noopener noreferrer">Cheyenne Piper</a>
-                    </span>
-                </p>
-            </footer>
-        </main>
-
-    </div>
-
-
-
-
-
-
-    <script src="app.js"></script>
-
-</body>
-
-
-
-</html>
+</Template>

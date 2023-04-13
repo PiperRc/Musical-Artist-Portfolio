@@ -1,22 +1,16 @@
 {
-  "name": "musical-artist-portfolio",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "name": "",
+  "type": "module",
+  "version": "0.0.1",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/PiperRc/Musical-Artist-Portfolio.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/PiperRc/Musical-Artist-Portfolio/issues"
-  },
-  "homepage": "https://github.com/PiperRc/Musical-Artist-Portfolio#readme",
   "dependencies": {
+    "astro": "^2.2.3",
     "lightgallery": "^2.7.1"
   }
 }
