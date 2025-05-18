@@ -15,103 +15,13 @@ html {
     --heading-font-size: 3rem;
 }
 
-html,
+/* html,
 body {
     overflow-x: hidden;
-}
-
-/* MODAL */
-
-.modal {
-    z-index: 1000;
-    position: fixed;
-    background-color: #FAF9F6;
-    /* add to desktop */
-    /* padding:2rem; */
-    
-    width: 100%;
-    max-width: 600px;
-    padding:.5rem;
-
-    left: 50%;
-    top: 50%;
-    transform: scale(0) translate(-50%, -50%);
-    transform-origin: center center;
-
-
-    padding-top:3rem;
-    padding-bottom: 3rem;
-
-}
-
-.modal_content {
-    width: 100%;
-    /* background-color:  red; */
-    margin: 0 auto;
-}
-
-.container,
-.modal,
-.share_link {
-    transition: 500ms ease-in-out;
-}
-
-
-.modal-display {
-  transform: scale(1) translate(-50%, -50%);
-
-}
-
-.modal_content h1 {
-    text-align: center;
-}
-
-.copy_link {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding-top: 2rem;
-}
-
-.copy_link input,
-.copy_link button {
-    font-size: 1.7rem;
-    padding: .5rem 0 .5rem 0;
-}
-
-.copy_link button {
-    cursor: pointer;
-}
-
-
-.modal_share {
-    padding-top: 2rem;
-    display: flex;
-    justify-content: space-around
-}
-
-.modal_share .fa-whatsapp {
-    color: #25d366;
-}
+} */
 
 
 
-
-/* navbar */
-.hamburger {
-    position: fixed;
-    width: 5rem;
-    height: 5rem;
-    right: .5rem;
-    top: .1rem;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    z-index: 100;
-    cursor: pointer;
-    /* pointer-events: none; */
-}
 
 
 
@@ -166,54 +76,14 @@ body {
 }
 
 
-nav {
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    height: 100vh;
-    width: 0%;
-    transition: width 1s;
-    background-color: greenyellow;
-}
 
 a.logo {
     display: none;
 }
 
-/* when the hamburger is clicked,this class added to .nav-width */
-.nav-width {
-    width: 50%;
-}
+
 
 /*  */
-.navbar {
-    width: 100%;
-    height: 80%;
-    list-style: none;
-    font-size: 2.5em;
-    color: black;
-    visibility: hidden;
-    opacity: 0;
-    transition: opacity 1s;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    align-items: center;
-    font-weight: bold;
-}
-
-/* when the hamburger is clicked,this class added to .navbar */
-.navbar-visible {
-    visibility: visible;
-    opacity: 1;
-}
-
-/*  */
-.navbar a {
-    color: black;
-    text-decoration: none;
-    position: relative;
-}
 
 
 /* index.html*/
@@ -515,70 +385,6 @@ footer span a {
 
 @media screen and (min-width:1100px) {
 
-.modal h1{
-    font-size: 3rem;
-}
-
-.modal input{
-    font-size: 2rem;
-    padding:1rem;
-    padding-right:2rem;
-    
-}
-
-.modal button{
-    font-size: 2rem;
-    padding:1rem;
-    padding-left:2rem;
-    padding-right: 2rem;
-}
-
-    .hamburger {
-        display: none;
-    }
-
-    nav {
-        position: static;
-        z-index: 100;
-        height: 12vh;
-        width: 100%;
-        background-color: hsla(0, 0%, 100%, .9);
-
-
-    }
-
-    .navbar a {
-        color: black;
-        font-size: 2rem;
-    }
-
-    /* from mobile */
-
-    /* .navbar {
-        /* width: 100%;
-        height: 80%;
-        list-style: none;
-        font-size: 2.5em;
-        color: black;
-        visibility: hidden;
-        opacity: 0;
-        transition: opacity 1s;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        align-items: center;
-        font-weight: bold;
-    } */
-
-    .navbar {
-        height: 100%;
-        visibility: visible;
-        opacity: .5;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 0 8rem 0 8rem;
-    }
-
     a.logo {
         display: block;
         font-family: 'Lobster', cursive;
@@ -669,24 +475,6 @@ footer span a {
 
 
     /*animations */
-
-
-    .navbar a::after,
-    .social_links span::after {
-        content: '';
-        display: block;
-        width: 100%;
-        height: .5rem;
-        background: #0096FF;
-        transform: scaleX(0);
-        transition: 300ms ease-in-out;
-        transform-origin: left;
-    }
-
-    .navbar a:hover::after,
-    .social_links span:hover::after {
-        transform: scaleX(1);
-    }
 
 
     .social_links a,
