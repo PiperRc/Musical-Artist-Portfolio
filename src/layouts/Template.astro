@@ -10,19 +10,11 @@
         <link rel="icon" href="/favicon.ico" type="image/x-icon" />
         <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
 
-        <!-- GOOGLE FONT-Poppins -->
+        <!-- GOOGLE FONTS: Poppins + Lobster -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
         <link
-            href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;900&display=swap"
-            rel="stylesheet"
-        />
-
-        <!-- GOOGLE FONT-LOBSTER -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-            href="https://fonts.googleapis.com/css2?family=Lobster&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Lobster&family=Poppins:wght@300;400;500;600;700;900&display=swap"
             rel="stylesheet"
         />
 
@@ -65,79 +57,89 @@
     <body>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
-              <a class="navbar-brand" href="#">Navbar</a>
-              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
-              <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
-
-            <main>
-                <!-- content of index.html -->
-                <slot />
-                <!--  -->
-
-                <section class="social_media">
-                    <h2>SOCIAL MEDIA</h2>
-
-                    <div class="social_links">
-                        <a href="#" class="facebook-link">
-                            <i class="fa-brands fa-facebook fa-4x"></i>
-                        </a>
-
-                        <a href="#" class="instagram_link">
-                            <i class="fa-brands fa-instagram fa-4x"></i>
-                        </a>
-                    </div>
-                </section>
-
-                <footer>
-                    <p>
-                        &copy Lynette Steele 2023
-                        <span>
-                            Made by <a
-                                href="https://www.cheyennepiper.com"
-                                target="_blank"
-                                rel="noopener noreferrer">Cheyenne Piper</a
+                <a class="navbar-brand" href="#">Lady Gypsy</a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/"
+                                >HOME</a
                             >
-                        </span>
-                    </p>
-                </footer>
-            </main>
-        </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/biography">ABOUT</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/photos">PHOTOS</a>
+                        </li>
 
-        <!-- lightgallery -->
-        <script src="/js/lightgallery/lightgallery.umd.js" is:inline></script>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/contact">CONTACT</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
 
-        <!-- plugin -->
-        <script
-            src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"
-            is:inline></script>
+        <main>
+            <!-- content of index.html -->
+            <slot />
+            <!--  -->
 
-        <script type="text/javascript">
-            lightGallery(document.querySelector(".gallery"), {
-                plugins: [lgThumbnail],
-                speed: 200,
-                mode: "lg-fade",
-            });
-        </script>
+            <section class="social_media">
+                <h2>SOCIAL MEDIA</h2>
 
-        <script src="/js/app.js" is:inline></script>
+                <div class="social_links">
+                    <a href="#" class="facebook-link">
+                        <i class="fa-brands fa-facebook fa-4x"></i>
+                    </a>
+
+                    <a href="#" class="instagram_link">
+                        <i class="fa-brands fa-instagram fa-4x"></i>
+                    </a>
+                </div>
+            </section>
+
+            <footer>
+                <p>
+                    &copy Lynette Steele 2023
+                    <span>
+                        Made by <a
+                            href="https://www.cheyennepiper.com"
+                            target="_blank"
+                            rel="noopener noreferrer">Cheyenne Piper</a
+                        >
+                    </span>
+                </p>
+            </footer>
+        </main>
     </body>
+
+    <!-- lightgallery -->
+    <script src="/js/lightgallery/lightgallery.umd.js" is:inline></script>
+
+    <!-- plugin -->
+    <script
+        src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"
+        is:inline></script>
+
+    <script type="text/javascript">
+        lightGallery(document.querySelector(".gallery"), {
+            plugins: [lgThumbnail],
+            speed: 200,
+            mode: "lg-fade",
+        });
+    </script>
+
+    <script src="/js/app.js" is:inline></script>
 </html>

@@ -19,9 +19,21 @@ html {
 body {
     overflow-x: hidden;
 } */
+ 
 
+/*navbar  */
+.nav-item{
+    font-size: 1.5rem;
+    
+}
 
-/*  */
+.nav-link{
+    color:black;
+
+}
+.navbar-brand{
+    font-size: 3rem;
+}
 
 
 /* index.html*/
