@@ -1,0 +1,18 @@
+
+ <!-- lightgallery -->
+ <script src="/js/lightgallery/lightgallery.umd.js" is:inline></script>
+
+ <!-- plugin -->
+ <script
+     src="/js/lightgallery/plugins/thumbnail/lg-thumbnail.umd.js"
+     is:inline></script>
+
+ <script type="text/javascript">
+     lightGallery(document.querySelector(".gallery"), {
+         plugins: [lgThumbnail],
+         speed: 200,
+         mode: "lg-fade",
+     });
+ </script>
+
+ <script src="/js/app.js" is:inline></script>
