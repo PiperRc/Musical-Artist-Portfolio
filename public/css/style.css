@@ -36,6 +36,13 @@ body {
     font-family: 'Lobster', cursive;
 }
 
+/* hamburger */
+.navbar-toggler-icon {
+    width:2.6rem;
+    height:2.6rem;
+}
+
+
 
 /* index.html*/
 
