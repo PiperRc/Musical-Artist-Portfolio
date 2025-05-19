@@ -36,6 +36,7 @@ body {
     font-family: 'Lobster', cursive;
 }
 
+
 /* hamburger */
 .navbar-toggler-icon {
     width:2.6rem;
@@ -346,14 +347,23 @@ footer span a {
     opacity: 1;
 }
 
-@media screen and (min-width:1100px) {
+@media screen and (min-width:1000px) {
 
-    a.logo {
-        display: block;
-        font-family: 'Lobster', cursive;
-        letter-spacing: 5px;
+    /* navbar */
+
+    div#navbarNav {
+        justify-content: end;
+    }
+
+    .navbar-brand{
         font-size: 4rem;
     }
+    .nav-item{
+        font-size: 2rem;
+        font-style: italic;
+        
+    }
+    
 
     /* hero_section */
 
@@ -410,11 +420,7 @@ footer span a {
 
 
     .gallery {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    
-
+      
         display: grid;
         grid-gap: 1.5rem;
         grid-template-columns: repeat(4, 1fr);
