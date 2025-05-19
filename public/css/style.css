@@ -274,9 +274,10 @@ form {
 }
 
 
-.social_media h1 {
+.social_media h2 {
     text-align: center;
     font-size: 2rem;
+    font-style: italic;
 }
 
 .social_media a {
